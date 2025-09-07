@@ -1,0 +1,40 @@
+{
+  "port": 7890,
+  "socks-port": 1080,
+  "allow-lan": true,
+  "mode": "Rule",
+  "log-level": "info",
+  "proxies": [
+    {
+      "name": "PUBG-SOCKS",
+      "type": "socks5",
+      "server": "91.106.109.12",
+      "port": 1080
+    },
+    {
+      "name": "PUBG-HTTP",
+      "type": "http",
+      "server": "91.106.109.12",
+      "port": 8080
+    }
+  ],
+  "rules": [
+    "DOMAIN-SUFFIX,pubgmobile.com,PUBG-SOCKS",
+    "DOMAIN-SUFFIX,pubg.com,PUBG-SOCKS",
+    "DOMAIN-SUFFIX,tencent.com,PUBG-SOCKS",
+    "DOMAIN-SUFFIX,tencentgames.com,PUBG-SOCKS",
+    "DOMAIN-SUFFIX,tencentcloudapi.com,PUBG-SOCKS",
+    "DOMAIN-SUFFIX,tencentyun.com,PUBG-SOCKS",
+    "DOMAIN-SUFFIX,garena.com,PUBG-SOCKS",
+    "DOMAIN-SUFFIX,bilibiligame.net,PUBG-SOCKS",
+    "DOMAIN-SUFFIX,akamaized.net,PUBG-SOCKS",
+    "DOMAIN-SUFFIX,amazonaws.com,PUBG-HTTP",
+    "DOMAIN-SUFFIX,cloudfront.net,PUBG-HTTP",
+    "DOMAIN-SUFFIX,azureedge.net,PUBG-HTTP",
+    "DOMAIN-SUFFIX,googleusercontent.com,PUBG-HTTP",
+    "DOMAIN-SUFFIX,fastly.net,PUBG-HTTP",
+    "DOMAIN-SUFFIX,akamaiedge.net,PUBG-HTTP",
+    "DOMAIN-SUFFIX,ggpht.com,PUBG-HTTP",
+    "FINAL,PUBG-SOCKS"
+  ]
+}
