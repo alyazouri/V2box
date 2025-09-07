@@ -1,0 +1,27 @@
+rules:
+  # 🎮 PUBG Mobile - Game Servers
+  - DST-PORT,20000-20003,PROXY
+  - DST-PORT,10012,PROXY
+  - DST-PORT,17500,PROXY
+  - DST-PORT,7086,PROXY
+  - DST-PORT,8011,PROXY
+  - DST-PORT,50000-65000,PROXY
+
+  # 🏠 Lobby / Matchmaking
+  - DST-PORT,8085,PROXY
+  - DST-PORT,10491,PROXY
+  - DST-PORT,14000,PROXY
+  - DST-PORT,17000,PROXY
+
+  # 📦 Updates & Assets
+  - DST-PORT,80,PROXY
+  - DST-PORT,443,PROXY
+  - DST-PORT,8000,PROXY
+  - DST-PORT,8011,PROXY
+
+  # 🎤 Voice & Extra Tencent Services
+  - DST-PORT,12000,PROXY
+  - DST-PORT,20002,PROXY
+
+  # الباقي مباشرة → DIRECT
+  - MATCH,DIRECT
