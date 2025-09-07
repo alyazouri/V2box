@@ -1,0 +1,63 @@
+{
+  "configs": [
+    {
+      "remarks": "PUBG-SOCKS",
+      "server": "91.106.109.12",
+      "port": 1080,
+      "id": "",
+      "alterId": 0,
+      "security": "auto",
+      "network": "tcp",
+      "type": "socks"
+    },
+    {
+      "remarks": "PUBG-HTTP",
+      "server": "91.106.109.12",
+      "port": 8080,
+      "id": "",
+      "alterId": 0,
+      "security": "auto",
+      "network": "tcp",
+      "type": "http"
+    }
+  ],
+  "index": 0,
+  "strategy": "rules",
+  "global": false,
+  "enabled": true,
+  "rules": [
+    {
+      "type": "field",
+      "outboundTag": "PUBG-SOCKS",
+      "domain": [
+        "pubgmobile.com",
+        "pubg.com",
+        "tencent.com",
+        "tencentgames.com",
+        "tencentcloudapi.com",
+        "tencentyun.com",
+        "garena.com",
+        "bilibiligame.net",
+        "akamaized.net"
+      ]
+    },
+    {
+      "type": "field",
+      "outboundTag": "PUBG-HTTP",
+      "domain": [
+        "amazonaws.com",
+        "cloudfront.net",
+        "azureedge.net",
+        "googleusercontent.com",
+        "fastly.net",
+        "akamaiedge.net",
+        "ggpht.com"
+      ]
+    },
+    {
+      "type": "field",
+      "outboundTag": "PUBG-SOCKS",
+      "domain": ["geosite:all"]
+    }
+  ]
+}
